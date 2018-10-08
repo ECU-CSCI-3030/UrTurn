@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">UrTurn</string>
+    <string name="log_in_button_text">Log In</string>
+    <string name="sign_up_button_text">Sign Up</string>
+    <string name="default_email_text"></string>
+    <string name="password_text">Password</string>
+    <string name="email_text">Email</string>
+</resources>
