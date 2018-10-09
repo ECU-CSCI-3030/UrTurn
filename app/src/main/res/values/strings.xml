@@ -4,5 +4,12 @@
     <string name="sign_up_button_text">Sign Up</string>
     <string name="default_email_text"></string>
     <string name="password_text">Password</string>
-    <string name="email_text">Email</string>
+    <string name="email_text">E-mail</string>
+    <string name="todo">TODO</string>
+    <string name="samplephoto">SamplePhoto</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="test_second_screen">Main Menu</string>
+    <string name="menu_change">Menu Change</string>
+    <string name="swap_button">Swap</string>
+    <string name="attempts">5</string>
 </resources>
