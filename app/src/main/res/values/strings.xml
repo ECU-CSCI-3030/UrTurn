@@ -9,7 +9,7 @@
     <string name="samplephoto">SamplePhoto</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="test_second_screen">Main Menu</string>
-    <string name="menu_change">Menu Change</string>
+    <string name="room_number">Room Number</string>
     <string name="swap_button">Swap</string>
     <string name="attempts">5</string>
 </resources>
