@@ -11,6 +11,89 @@ public class User {
     int choresDone;
     int rating;
     boolean inRoom;
+    String device_key; //This will be used to store information about the users device for sending notifications
+
+
+    public int getuID() {
+        return uID;
+    }
+
+    public void setuID(int uID) {
+        this.uID = uID;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getfName() {
+        return fName;
+    }
+
+    public void setfName(String fName) {
+        this.fName = fName;
+    }
+
+    public String getlName() {
+        return lName;
+    }
+
+    public void setlName(String lName) {
+        this.lName = lName;
+    }
+
+    public int getrID() {
+        return rID;
+    }
+
+    public void setrID(int rID) {
+        this.rID = rID;
+    }
+
+    public int getChoresDone() {
+        return choresDone;
+    }
+
+    public void setChoresDone(int choresDone) {
+        this.choresDone = choresDone;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public boolean isInRoom() {
+        return inRoom;
+    }
+
+    public void setInRoom(boolean inRoom) {
+        this.inRoom = inRoom;
+    }
+
+    public String getDevice_key() {
+        return device_key;
+    }
+
+    public void setDevice_key(String device_key) {
+        this.device_key = device_key;
+    }
+
 
     /**
      * This method will sign up a user that does not already exist in the database
@@ -101,4 +184,6 @@ public class User {
     public void randomAssignChore(){
 
     }
+
+
 }

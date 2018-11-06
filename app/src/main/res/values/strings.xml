@@ -5,4 +5,10 @@
     <string name="title_activity_log_in">logIn</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="login_text">A Roommate Chore Application</string>
+    <string name="login_button">Login</string>
+    <string name="register_button">Register</string>
+    <string name="username_text_view">Username</string>
+    <string name="room_number">204</string>
+    <string name="swap_button">Swap</string>
 </resources>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "289137348295",
+    "firebase_url": "https://urturntest-e1637.firebaseio.com",
+    "project_id": "urturntest-e1637",
+    "storage_bucket": "urturntest-e1637.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289137348295:android:92113c202e2645f8",
+        "android_client_info": {
+          "package_name": "com.team11.urturn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289137348295-u30jg27l61d8gpsjdfjo51q7q45vsjjg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.team11.urturn",
+            "certificate_hash": "9966bf5d1a399f1111dd99c8046b0fe030f9b733"
+          }
+        },
+        {
+          "client_id": "289137348295-4gs1om746csaorm6kd4dj3aoi9pnc7j8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB78Rsmzs-P6C4qmGf8eEcKrcq_9C0wcoE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "289137348295-4gs1om746csaorm6kd4dj3aoi9pnc7j8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
