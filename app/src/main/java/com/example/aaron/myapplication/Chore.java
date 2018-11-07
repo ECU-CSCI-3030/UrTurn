@@ -1,6 +1,12 @@
 package com.example.aaron.myapplication;
 
+import java.util.Scanner;
+import java.util.Random;
+
 public class Chore {
+
+    Scanner  scanner = new Scanner(System.in);
+    Random id = new Random();
     int cID;
     String cName;
     String cdShort;
@@ -83,6 +89,18 @@ public class Chore {
      */
     public void addChore(){
 
+
+
+        //this is what i think  should go in
+        //System.out.println("Enter your new Chore");
+        //String chore = scanner.nextLine();
+        //System.out.println("Enter a description of the chore");
+        //String ChoreDescription = scanner.nextLine();
+        //cID = id.nextInt(100);
+        //System.out.println("How  severe is the chore 1 being highest, 3 being lowest");
+        //level = scanner.nextInt();
+
+
     }
 
     /**
@@ -90,6 +108,7 @@ public class Chore {
      * SQL
      */
     public void removeChore(){
+
 
     }
 

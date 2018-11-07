@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "289137348295",
-    "firebase_url": "https://urturntest-e1637.firebaseio.com",
-    "project_id": "urturntest-e1637",
-    "storage_bucket": "urturntest-e1637.appspot.com"
+    "project_number": "987653811205",
+    "firebase_url": "https://urturn-82515.firebaseio.com",
+    "project_id": "urturn-82515",
+    "storage_bucket": "urturn-82515.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:289137348295:android:92113c202e2645f8",
+        "mobilesdk_app_id": "1:987653811205:android:bd7f7c0ad5ec94c9",
         "android_client_info": {
-          "package_name": "com.team11.urturn"
+          "package_name": "com.example.aaron.myapplication"
         }
       },
       "oauth_client": [
         {
-          "client_id": "289137348295-u30jg27l61d8gpsjdfjo51q7q45vsjjg.apps.googleusercontent.com",
+          "client_id": "987653811205-edqleegh5763euibj6h3vgn1fnt1os9k.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.team11.urturn",
-            "certificate_hash": "9966bf5d1a399f1111dd99c8046b0fe030f9b733"
+            "package_name": "com.example.aaron.myapplication",
+            "certificate_hash": "9190f86be92d94a20894e126e4dd727032bc89e9"
           }
         },
         {
-          "client_id": "289137348295-4gs1om746csaorm6kd4dj3aoi9pnc7j8.apps.googleusercontent.com",
+          "client_id": "987653811205-9c65ap4fh9lgp8falrjbv1cq6e78u3m3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB78Rsmzs-P6C4qmGf8eEcKrcq_9C0wcoE"
+          "current_key": "AIzaSyDHDKmwfj_6OO32A_H5KJaMfmTESe3HnP8"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "289137348295-4gs1om746csaorm6kd4dj3aoi9pnc7j8.apps.googleusercontent.com",
+              "client_id": "987653811205-9c65ap4fh9lgp8falrjbv1cq6e78u3m3.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
