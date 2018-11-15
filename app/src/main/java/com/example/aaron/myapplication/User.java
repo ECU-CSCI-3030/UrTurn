@@ -107,6 +107,7 @@ public class User {
      */
     public void signUp(String email, String password, String fName, String lName){
 
+        //fireabse
     }
 
     /**
@@ -121,6 +122,8 @@ public class User {
      */
     public void login(String email, String password){
 
+
+        //firebase
     }
 
     /**
@@ -128,7 +131,7 @@ public class User {
      * Currently in the room
      */
     public void assignChore(){
-
+        //
     }
 
     /**

@@ -1,6 +1,8 @@
 package com.example.aaron.myapplication;
 
 import android.annotation.SuppressLint;
+import android.arch.lifecycle.ViewModelStore;
+import android.support.annotation.NonNull;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,6 +24,12 @@ import android.content.Intent;
 public class logIn extends AppCompatActivity {
     public Button log;
     private VideoView mVideoView;
+
+    @NonNull
+    @Override
+    public ViewModelStore getViewModelStore() {
+        return super.getViewModelStore();
+    }
 
     public void init() {
         log = (Button) findViewById(R.id.googleLogin);
@@ -60,6 +68,6 @@ public class logIn extends AppCompatActivity {
 
 
     }
-
+            //Most methods in this class will be firebase oriented
 
 }

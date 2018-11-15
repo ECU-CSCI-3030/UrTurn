@@ -7,6 +7,7 @@ public class ChoreList extends Chore {
 
 
 
+
     public String getDateAssigned() {
         return dateAssigned;
     }

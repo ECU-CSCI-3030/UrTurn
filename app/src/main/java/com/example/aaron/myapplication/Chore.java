@@ -1,5 +1,7 @@
 package com.example.aaron.myapplication;
 
+
+
 import java.util.Scanner;
 import java.util.Random;
 
@@ -80,7 +82,7 @@ public class Chore {
      * @param notifiee This User will recieve the notification
      */
     public void notify(User notifier, User notifiee){
-
+        //Nick
     }
 
     /**
@@ -89,6 +91,7 @@ public class Chore {
      */
     public void addChore(){
 
+        //Aanil
 
 
         //this is what i think  should go in
@@ -109,6 +112,8 @@ public class Chore {
      */
     public void removeChore(){
 
+    //Aaron
+
 
     }
 
@@ -117,6 +122,7 @@ public class Chore {
      * active chore of a roomate
      */
     public void exchangeChore(Chore yourChore, User roomate, Chore roomatesChore){
+
 
     }
 

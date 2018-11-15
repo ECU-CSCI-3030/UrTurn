@@ -35,7 +35,7 @@ public class Room {
          * @return Return True if the room contains the specified User
          */
         public boolean isInRoom(int room,int userID){
-
+            //Firebase most likely
             return true;
         }
 
