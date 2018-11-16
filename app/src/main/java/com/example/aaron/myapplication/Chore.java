@@ -1,22 +1,14 @@
 package com.example.aaron.myapplication;
 
-
-
-import java.util.Scanner;
 import java.util.Random;
 
 public class Chore {
 
-    Scanner  scanner = new Scanner(System.in);
     Random id = new Random();
     int cID;
     String cName;
-    String cdShort;
-    String cdLong;
     int level;  //Severity
     boolean active;
-    boolean completed;
-
 
     public int getcID() {
         return cID;
@@ -34,22 +26,6 @@ public class Chore {
         this.cName = cName;
     }
 
-    public String getCdShort() {
-        return cdShort;
-    }
-
-    public void setCdShort(String cdShort) {
-        this.cdShort = cdShort;
-    }
-
-    public String getCdLong() {
-        return cdLong;
-    }
-
-    public void setCdLong(String cdLong) {
-        this.cdLong = cdLong;
-    }
-
     public int getLevel() {
         return level;
     }
@@ -64,14 +40,6 @@ public class Chore {
 
     public void setActive(boolean active) {
         this.active = active;
-    }
-
-    public boolean isCompleted() {
-        return completed;
-    }
-
-    public void setCompleted(boolean completed) {
-        this.completed = completed;
     }
 
 

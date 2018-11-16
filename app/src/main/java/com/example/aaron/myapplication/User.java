@@ -1,26 +1,29 @@
 package com.example.aaron.myapplication;
 
+
 public class User {
 
-    int uID;
-    String email;
-    String password;
-    String fName;
-    String lName;
-    int rID;
-    int choresDone;
-    int rating;
-    boolean inRoom;
-    String device_key; //This will be used to store information about the users device for sending notifications
+    private String email;
+    private String password;
+    private String userName;
+    private int rID;
+    private boolean inRoom;
 
+    public User() {
 
-    public int getuID() {
-        return uID;
     }
 
-    public void setuID(int uID) {
-        this.uID = uID;
+    public User(String email, String password, String userName, int rID, boolean inRoom) {
+        this.email = email;
+        this.password = password;
+        this.userName = userName;
+        this.rID = rID;
+        this.inRoom = inRoom;
     }
+
+    public String getUserName() { return userName; }
+
+    public void setUserName(String userName) { this.userName = userName;}
 
     public String getEmail() {
         return email;
@@ -38,22 +41,6 @@ public class User {
         this.password = password;
     }
 
-    public String getfName() {
-        return fName;
-    }
-
-    public void setfName(String fName) {
-        this.fName = fName;
-    }
-
-    public String getlName() {
-        return lName;
-    }
-
-    public void setlName(String lName) {
-        this.lName = lName;
-    }
-
     public int getrID() {
         return rID;
     }
@@ -62,36 +49,12 @@ public class User {
         this.rID = rID;
     }
 
-    public int getChoresDone() {
-        return choresDone;
-    }
-
-    public void setChoresDone(int choresDone) {
-        this.choresDone = choresDone;
-    }
-
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
-
     public boolean isInRoom() {
         return inRoom;
     }
 
     public void setInRoom(boolean inRoom) {
         this.inRoom = inRoom;
-    }
-
-    public String getDevice_key() {
-        return device_key;
-    }
-
-    public void setDevice_key(String device_key) {
-        this.device_key = device_key;
     }
 
 
@@ -107,7 +70,7 @@ public class User {
      */
     public void signUp(String email, String password, String fName, String lName){
 
-        //fireabse
+
     }
 
     /**
@@ -120,11 +83,6 @@ public class User {
      * Firebase Integration
      *
      */
-    public void login(String email, String password){
-
-
-        //firebase
-    }
 
     /**
      * This method will allow a user to assign a chore to another user

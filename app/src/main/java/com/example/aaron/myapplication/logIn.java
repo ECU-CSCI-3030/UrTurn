@@ -1,20 +1,24 @@
 package com.example.aaron.myapplication;
 
-import android.annotation.SuppressLint;
 import android.arch.lifecycle.ViewModelStore;
-import android.support.annotation.NonNull;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.os.Handler;
-import android.view.MotionEvent;
-import android.view.View;
-import android.net.Uri;
-import android.widget.Button;
-import android.widget.VideoView;
-import android.media.MediaPlayer;
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.VideoView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 /**
@@ -24,6 +28,9 @@ import android.content.Intent;
 public class logIn extends AppCompatActivity {
     public Button log;
     private VideoView mVideoView;
+    private TextView email;
+    private TextView password;
+    private FirebaseAuth mAuth;
 
     @NonNull
     @Override
@@ -32,10 +39,20 @@ public class logIn extends AppCompatActivity {
     }
 
     public void init() {
-        log = (Button) findViewById(R.id.googleLogin);
+
+        email = (TextView) findViewById(R.id.emailText);
+
+        password = (TextView) findViewById(R.id.passwordText);
+
+        log = (Button) findViewById(R.id.loginButton);
+
+        mAuth = FirebaseAuth.getInstance();
+
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v){
+
+                //logIn.login(email.toString().trim(), password.toString().trim());
 
                 Intent intent = new Intent(logIn.this, MainActivity.class);
                 startActivity(intent);
@@ -45,6 +62,7 @@ public class logIn extends AppCompatActivity {
 
         });
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +86,49 @@ public class logIn extends AppCompatActivity {
 
 
     }
-            //Most methods in this class will be firebase oriented
+
+    public void createAccount(){
+
+        mAuth.createUserWithEmailAndPassword(email.toString().trim(), password.toString().trim())
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    Log.d("TAG", "createUserWithEmail: Success");
+                    FirebaseUser user = mAuth.getCurrentUser();
+                    //updateUI(user);
+
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Log.w("TAG", "createUserWithEmail:failure", task.getException());
+                    Toast.makeText(logIn.this, "Authentication failed.",
+                            Toast.LENGTH_SHORT).show();
+                    //updateUI(null);
+                }
+
+                // ...
+            }
+        });
+
+
+    }
+
+    public void login(String email, String password){
+        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    Log.d("TAG", "signInWithEmail : success");
+                    FirebaseUser user = mAuth.getCurrentUser();
+                    //updateUI(user);
+                }
+                else {
+                    Log.w("TAG", "signInWithEmail : failure", task.getException());
+                    Toast.makeText(logIn.this,"Authentication failed.", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
+    }
 
 }
