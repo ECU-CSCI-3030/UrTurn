@@ -42,6 +42,7 @@ public class logIn extends AppCompatActivity {
 
 
     public void init() {
+        mVideoView = (VideoView) findViewById(R.id.bgVideoView);
 
         Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.bg_video);
 
@@ -49,6 +50,12 @@ public class logIn extends AppCompatActivity {
 
         mVideoView.setVideoURI(uri);
         mVideoView.start();
+        mVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                mediaPlayer.setLooping(true);
+            }
+        });
 
         //Views and Buttons
         email = (TextView) findViewById(R.id.emailText);
@@ -58,7 +65,6 @@ public class logIn extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         //Firebase initialization
-        mVideoView = (VideoView) findViewById(R.id.bgVideoView);
 
 
         login_button.setOnClickListener(new View.OnClickListener() {
