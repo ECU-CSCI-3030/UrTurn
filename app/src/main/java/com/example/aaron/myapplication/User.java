@@ -1,6 +1,8 @@
 package com.example.aaron.myapplication;
 
 
+import com.google.firebase.auth.FirebaseUser;
+
 public class User {
 
     private String email;
@@ -19,6 +21,17 @@ public class User {
         this.userName = userName;
         this.rID = rID;
         this.inRoom = inRoom;
+    }
+
+    /**
+     * Validate method will check to see if a user is already registered
+     * @param currentUser The current user will be inspected and validated accordingly
+     * @return
+     */
+    public static boolean validate(FirebaseUser currentUser) {
+
+        return true;
+
     }
 
     public String getUserName() { return userName; }
@@ -145,6 +158,5 @@ public class User {
     public void randomAssignChore(){
 
     }
-
 
 }
