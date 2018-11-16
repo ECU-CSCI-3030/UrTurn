@@ -1,15 +1,34 @@
 package com.example.aaron.myapplication;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 
 public class MainActivity extends AppCompatActivity {
+
+
+    private BottomNavigationView mMainNav;
+    private FrameLayout mMainFrame;
+private HomeFragment homefragment;
+private HistoryFragment historyFragment;
+    private ProfileFragment profileFragment;
+    private SettingsFragment settingsFragment;
+    private ChoreFragment choreFragment;
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,15 +37,63 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        mMainFrame= (FrameLayout) findViewById(R.id.main_frame);
+        mMainNav= (BottomNavigationView) findViewById(R.id.content_nav);
+
+        homefragment= new HomeFragment();
+        historyFragment= new HistoryFragment();
+        choreFragment= new ChoreFragment();
+        profileFragment= new ProfileFragment();
+        settingsFragment= new SettingsFragment();
+        setFragment(homefragment);
+
+
+        mMainNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                switch (menuItem.getItemId()){
+
+                    case R.id.nav_home :
+                        setFragment(homefragment);
+                        return true;
+                    case R.id.nav_history :
+                        setFragment(historyFragment);
+                        return true;
+                    case R.id.nav_chore :
+                        setFragment(choreFragment);
+                        return true;
+                    case R.id.nav_profile :
+                        setFragment(profileFragment);
+                        return true;
+                    case R.id.nav_settings :
+                        setFragment(settingsFragment);
+                        return true;
+
+                    default:
+                        return false;
+                }
+
+
+
+
             }
         });
+
+
+
     }
+
+
+    private void setFragment(Fragment fragment){
+
+        FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.main_frame, fragment );
+        fragmentTransaction.commit();
+
+
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
