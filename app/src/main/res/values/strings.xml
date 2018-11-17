@@ -16,4 +16,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="complete_chore">Complete Chore</string>
     <string name="edit_chores">Edit Chores</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="name">Name</string>
+    <string name="stan_lee">Stan Lee</string>
+    <string name="code">Code</string>
 </resources>
