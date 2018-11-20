@@ -104,6 +104,8 @@ public class Register extends AppCompatActivity  implements View.OnClickListener
         String key = database.getReference("Room").push().getKey();
         mDatabase.child("Room").child(key).child("Name").setValue(roomName);
         mDatabase.child("Roommates").child(key).child("Users").child(user.getUid()).setValue(name);
+        mDatabase.child("User").child(user.getUid()).child("RoomID").setValue(roomName);
+
         Toast.makeText(Register.this, "You have Created Room: "+ roomName, Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(Register.this, MainActivity.class);
@@ -131,6 +133,8 @@ public class Register extends AppCompatActivity  implements View.OnClickListener
                 if (snapshot.child("Room").hasChild(roomName)) {
                     Toast.makeText(Register.this, "You have Joined: "+ mDatabase.child("Room").child(roomName).child("Name").getKey(), Toast.LENGTH_SHORT).show();
                     mDatabase.child("Roommates").child(roomName).child("Users").child(user.getUid()).setValue(name);
+                    mDatabase.child("User").child(user.getUid()).child("RoomID").setValue(roomName);
+
                     Intent intent = new Intent(Register.this, MainActivity.class);
                     startActivity(intent);
 

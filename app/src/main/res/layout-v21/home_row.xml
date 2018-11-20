@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/homeRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="90dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="12dp">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkGrey"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/chorePic"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+
+                />
+
+            <TextView
+                android:id="@+id/choreTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+
+                android:text="CHORE"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+
+                />
+
+            <TextView
+                android:id="@+id/choreTurn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+
+
+                android:text="Its urTurn"
+                android:textColor="@color/white"
+
+
+                />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>
